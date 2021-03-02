@@ -1,0 +1,36 @@
+<center>
+    <br><br>
+    <h1>hello koa-cli !</h1>
+    <br>
+    <a href="/help">help</a>
+    <hr>
+    尝试向 <i><a href="/api/A">/api/A</a></i> 传递参数<br><br>
+    参数 <input id="_key" value="a" /> = <input id="_value" value="12" /><br><br>
+    <button onclick="_get()">get方法</button>
+    <button onclick="_post()">post方法</button>
+    <hr>
+    <div id="_tips">这里将会显示传递参数的返回结果,也可打开控制台查看结果</div>
+</center>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function _get() {
+        var json = {}
+        json[_key.value] = _value.value
+
+        axios.get('/api/A', {
+            params: json
+        }).then((res) => {
+            _tips.innerHTML = (res.data)
+            console.log(res)
+        }).catch((err) => console.log(err))
+    }
+    function _post() {
+        var json = {}
+        json[_key.value] = _value.value
+
+        axios.post('/api/A', json).then((res) => {
+            _tips.innerHTML = (res.data)
+            console.log(res)
+        }).catch((err) => console.log(err))
+    }
+</script>

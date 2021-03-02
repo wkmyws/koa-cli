@@ -1,0 +1,19 @@
+{
+  "name": "koa-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkmyws/koa-cli.git"
+  },
+  "author": "syy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wkmyws/koa-cli/issues"
+  },
+  "homepage": "https://github.com/wkmyws/koa-cli#readme"
+}
